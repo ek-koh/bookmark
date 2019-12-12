@@ -1,0 +1,15 @@
+{% extends 'Base.html'%}
+
+{% block title %}삭제{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+        {% csrf_token %}
+        <div class="alert alert-danger">
+            {{ object }} 을(를) 삭제하시겠습니까?
+        </div>
+        <input type="submit" value="삭제" class="btn btn-info">
+    </form>
+{% endblock %}
+
+
